@@ -14,7 +14,27 @@ export default createStore({
   },
   actions: {
     newTitle(contaxt, payload) {
-      contaxt.commit("setTitle", payload);
+      //   contaxt.commit("setTitle", payload);
+
+      //   setTimeout(() => {
+      //     contaxt.commit("setTitle", payload);
+      //   }, 2000);
+
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          contaxt.commit("setTitle", payload);
+          resolve("okey");
+        }, 2000);
+      });
+    },
+
+    newTitle2(contaxt, payload) {
+      contaxt
+        .dispatch({
+          type: "newTitle",
+          title: payload.title,
+        })
+        .then((res) => console.log(res));
     },
   },
 });

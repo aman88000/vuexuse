@@ -23,8 +23,12 @@
             //   })
 
 
-            this.$store.dispatch({
-                type: 'newTitle', title: 'new Action Title'
+            // this.$store.dispatch({
+            //     type: 'newTitle', title: 'new Action Title'
+            // }).then((res)=> console.log(res))
+
+                this.$store.dispatch({
+                type: 'newTitle2', title: 'new Action Title newTitle 2'
             })
              }
         }
