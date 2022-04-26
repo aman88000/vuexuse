@@ -12,4 +12,9 @@ export default createStore({
       state.title = payLoad.title; //3 way
     },
   },
+  actions: {
+    newTitle(contaxt, payload) {
+      contaxt.commit("setTitle", payload);
+    },
+  },
 });
