@@ -2,12 +2,12 @@
     <div>
         <h3>Child vue component</h3>
         <p>{{$store.state.title}}</p>
-        <button @click="changeTitle({title: 'test mapActions'})">Change Title</button>
+        <button @click="abc({title: 'test mapMutations'})">Change Title</button>
     </div>
 </template>
 
 <script>
-import {mapActions} from 'vuex'
+import {mapActions, mapMutations} from 'vuex'
     export default {
         name: 'ChildVue',
         methods: {
@@ -15,6 +15,10 @@ import {mapActions} from 'vuex'
             ...mapActions({
                 changeTitle: 'newTitle2'
             }),
+
+            ...mapMutations({
+                abc: 'setTitle'
+            })
             // changeTitle(){
             //   //  this.$store.state.title = 'abcd';     // simple way
             //   //  this.$store.commit('setTitle', 'updated Title')     // 1 way
