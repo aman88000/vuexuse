@@ -11,15 +11,16 @@
         name: 'ChildVue',
         methods: {
             changeTitle(){
+                this.$store.state.title = 'abcd';     // simple way
               //  this.$store.commit('setTitle', 'updated Title')     // 1 way
             //   this.$store.commit('setTitle', {                    // 2 way
             //       title: 'vuex Title'
             //   })
 
-               this.$store.commit({
-                   type: 'setTitle',
-                  title: 'vuex Title'
-              })
+            //    this.$store.commit({
+            //        type: 'setTitle',
+            //       title: 'vuex Title'
+            //   })
              }
         }
     }
