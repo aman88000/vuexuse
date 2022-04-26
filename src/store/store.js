@@ -4,6 +4,7 @@ export default createStore({
   state: {
     name: "aman",
     title: "VueX",
+    secretKey: 1313,
   },
   mutations: {
     setTitle(state, payLoad) {
@@ -36,5 +37,14 @@ export default createStore({
         })
         .then((res) => console.log(res));
     },
+  },
+  getters: {
+    WaheGuruAdd(state) {
+      return state.secretKey + "waheGuru";
+    },
+    newWaheGuruAdd(state, getters) {
+      return state.secretKey + " " + getters.WaheGuruAdd;
+    },
+    abcWaheGuru: (state) => (data) => data + state.title,
   },
 });
