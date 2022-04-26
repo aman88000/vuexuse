@@ -1,6 +1,7 @@
 <template>
   <div>
       <h2>First Parent Component</h2>
+      <h2>{{title}}</h2>
       <h3>{{waheGuru}}</h3>
       <h3>{{WaheGuru1313}}</h3>
       <p>{{$store.state.name}}</p>
@@ -9,6 +10,7 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 import ChildVue from './Child.vue'
 export default {
   name: "FirstVue",
@@ -16,6 +18,9 @@ export default {
       ChildVue
   },
   computed:{
+      ...mapState({
+          title: state => state.name
+      }),
       waheGuru(){
         //  return this.$store.getters.WaheGuruAdd
          return this.$store.getters.newWaheGuruAdd

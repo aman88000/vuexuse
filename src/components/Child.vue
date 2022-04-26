@@ -7,6 +7,7 @@
 </template>
 
 <script>
+// import {mapstate, mapMutations, mapActions, mapGetters} from 'vuex'
     export default {
         name: 'ChildVue',
         methods: {
