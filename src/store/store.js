@@ -1,6 +1,20 @@
 import { createStore } from "vuex";
 
+const adminData = {
+  state: {
+    name: "admin",
+  },
+  mutations: {
+    changeName(state, payload) {
+      state.name = payload.name;
+    },
+  },
+};
+
 export default createStore({
+  modules: {
+    adminData,
+  },
   state: {
     name: "aman",
     title: "VueX",
