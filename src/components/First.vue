@@ -38,7 +38,11 @@ export default {
     //       return this.$store.getters.abcWaheGuru('1313Wahe Guru Satname')
       },
       methods: {
-          ...mapMutations({
+        //   ...mapMutations({
+        //       adminChange: 'adminData/changeName'
+        //   })
+
+           ...mapMutations('adminData', {
               adminChange: 'changeName'
           })
       }

@@ -1,6 +1,7 @@
 import { createStore } from "vuex";
 
 const adminData = {
+  namespaced: true,
   state: {
     name: "admin",
   },
